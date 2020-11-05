@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+ 
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>VUICA - Venezolana de Uniformes Industriales</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/Logo rayitas.png' %}" rel="icon">
+  <link href="{% static 'img/favicon.ico' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
+  <link href="{% static 'vendor/icofont/icofont.min.css' %} " rel="stylesheet">
+  <link href="{% static 'vendor/remixicon/remixicon.css' %} " rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %} " rel="stylesheet">
+  <link href="{% static 'vendor/owl.carousel/assets/owl.carousel.min.css' %} " rel="stylesheet">
+  <link href="{% static 'vendor/venobox/venobox.css' %} " rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %} " rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %} " rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Vesperr - v2.0.0
+  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href={% url 'Homepage:Home' %}><img src="{% static  'img/LOGO.png' %}" alt="Logo Vuica" class="img-fluid"></a>
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href={% url 'Homepage:Home' %}>Inicio</a></li>
+          <li><a href={% url 'Homepage:Home' %}>Nosotros</a></li>
+          <li><a href={% url 'products:Lista de Productos' %}>Productos</a></li>
+          <li><a href={% url 'Homepage:Home' %}>Servicios</a></li>
+
+          <li class="get-started"><a href="#contact">Contáctenos</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Productos</h2>
+          <ol>
+            <li><a href={% url 'products:Lista de Productos' %}>Productos</a></li>
+            <li>{{ Codigo }}</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-8">
+              <h2 class="portfolio-title">{{ Nombre }}</h2>
+              <div class="owl-carousel portfolio-details-carousel">
+                <img src="{{ MEDIA_URL}}{{Imagen}}" class="img-fluid" alt="">
+                
+                
+              </div>
+            </div>
+
+            <div class="col-lg-4 portfolio-info">
+      
+              <ul>
+                <li><strong>Código</strong>: {{ Codigo }}</li>
+                <li><strong>Tallas</strong>: {{ Talla }}</li>
+                <li><strong>Unidades</strong>: {{ Unidades }}</li>
+                <li><strong>Hoja Técnica</strong>: <a href="{{ MEDIA_URL}}{{ Hoja_Tecnica }}"><b>CLICK AQUI PARA DESCARGAR</b></a></li>
+              </ul>
+
+              <p>
+                {{ Descripcion }} 
+                <br>
+                <br>
+                Para más información sobre este producto descargue la hoja técnica o consulte con nuestro equipo de ventas.
+              </p>
+            </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+     <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Contácto</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" >
+            <div class="contact-about">
+               
+              <div class="social-links">
+                <a href="https://twitter.com/VUICA_C_A" class="twitter"><i class="icofont-twitter"></i></a>
+                <a href="https://www.facebook.com/VUICA.1988/" class="facebook"><i class="icofont-facebook"></i></a>
+                <a href="https://www.instagram.com/vuica_c_a/" class="instagram"><i class="icofont-instagram"></i></a>
+                <a href="https://my.linkedin.com/company/venezolana-de-uniformes-industriales-vuica-c-a?trk=similar-pages_result-card_full-click" class="linkedin"><i class="icofont-linkedin"></i></a>
+              </div>
+              <img src="{% static 'img/logo_completo.png' %}" alt="Logo vuica" style="height: 120px; width: 300px; padding-left: 50px; margin-bottom: 20px">
+               
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d981.7316480941295!2d-67.45213065544962!3d10.186616904013261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8021651ab52ca1%3A0x6da23a6ce4389145!2sVENEZOLANA%20DE%20UNIFORMES%20INDUSTRIALES%20VUICA%2C%20C.A.!5e0!3m2!1ses!2sve!4v1598385184641!5m2!1ses!2sve" 
+              width="300" height="250" frameborder="0" style="border:0; display: block; margin-left:auto; margin-right:auto; padding-top: 20px; padding-bottom:10px; " allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="info">
+              <div>
+                <i class="ri-map-pin-line"></i>
+                <p>Carretera Nacional Cagua / Villa de Cura, Edif. Fátima, piso PB, local 1. Urb. Francisco de Miranda.<br> Cagua, Edo. Aragua. Venezuela. Zona Postal 2122.</p>
+              </div>
+
+              <div>
+                <i class="ri-mail-send-line"></i>
+                <p>ventas@vuica.com.ve</p>
+                <p>ventasvuica@gmail.com</p>
+              </div>
+
+              <div>
+                <i class="ri-phone-line"></i>
+                <p>(0244)447.19.89 / (0244)447.86.42 / (0244)395.97.44 / (0244)395.55.00/ Fax.:(0244)395.70.90</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-12" data-aos="fade-up" data-aos-delay="300">
+            <form action="#contact" method="post" role="form" class="php-email-form">
+               {% csrf_token %} 
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" data-rule="minlen:4" data-msg="Por favor introduzca al menos 4 caracteres" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" name="last_name" class="form-control" id="last_name" placeholder="Apellido" data-rule="minlen:4" data-msg="Por favor introduzca al menos 4 caracteres" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" name="empresa" class="form-control" id="empresa" placeholder="Empresa" data-rule="minlen:4" data-msg="Por favor introduzca al menos 4 caracteres" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" data-rule="email" data-msg="Por favor introduzca un e-mail válido" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujeto" data-rule="minlen:4" data-msg="Por favor introduzca al menos 8 carateres" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Por favor escriba aquí su mensaje" placeholder="Mensaje"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Cargando</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Su mensaje ha sido enviado. Gracias! Lo estaremos revisando en breve</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+  </main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row d-flex align-items-center">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            &copy; Copyright <strong>Vesperr</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/vesperr-free-bootstrap-template/ -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+  
+</body>
