@@ -10,7 +10,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns, static
 app_name= 'products'
 
 urlpatterns = [
-    path("", views.productos, name="Lista de Productos"),
+    path("", views.productos, name="Lista_de_Productos"),
     path("<str:Codigo>/", views.detalles),
     
 ]
