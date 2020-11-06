@@ -799,7 +799,7 @@ section {
 
 
   .services .icon-box:hover .icon {
-    background: gray;
+    background: black;
   }
 
   .services .icon-box:hover .icon i {
