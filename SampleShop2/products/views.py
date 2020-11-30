@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from products.models import Product
+from django.core.mail import send_mail
 
 def productos(request):
     productos = Product.objects.all()
@@ -14,7 +15,7 @@ def productos(request):
         message = request.POST["message"]
 
 
-        send_mail(subject= subject, message= "De: "+ name + " " + last_name + "\n" + "Correo: " + email + "\n" + "Empresa: " + empresa + "\n\n" + "Mensaje: " + message, from_email = email, recipient_list = [email, 'andrescvuica@gmail.com'])
+        send_mail(subject= subject, message= "De: "+ name + " " + last_name + "\n" + "Correo: " + email + "\n" + "Empresa: " + empresa + "\n\n" + "Mensaje: " + message, from_email = email, recipient_list = [email, 'ventasvuica@gmail.com','paginawebvuica@gmail.com'])
         
         return HttpResponse("Gracias, le estaremos contestando pronto!") 
 
@@ -47,7 +48,7 @@ def detalles(request, Codigo):
         message = request.POST["message"]
 
 
-        send_mail(subject= subject, message= "De: "+ name + " " + last_name + "\n" + "Correo: " + email + "\n" + "Empresa: " + empresa + "\n\n" + "Mensaje: " + message, from_email = email, recipient_list = [email, 'andrescvuica@gmail.com'])
+        send_mail(subject= subject, message= "De: "+ name + " " + last_name + "\n" + "Correo: " + email + "\n" + "Empresa: " + empresa + "\n\n" + "Mensaje: " + message, from_email = email, recipient_list = [email, 'ventasvuica@gmail.com','paginawebvuica@gmail.com'])
         
         return HttpResponse("Gracias, le estaremos contestando pronto!") 
 

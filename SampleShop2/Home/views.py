@@ -13,7 +13,7 @@ def index(request):
         message = request.POST["message"]
 
 
-        send_mail(subject= subject, message= "De: "+ name + " " + last_name + "\n" + "Correo: " + email + "\n" + "Empresa: " + empresa + "\n\n" + "Mensaje: " + message, from_email = email, recipient_list = [email, 'andrescvuica@gmail.com'])
+        send_mail(subject= subject, message= "De: "+ name + " " + last_name + "\n" + "Correo: " + email + "\n" + "Empresa: " + empresa + "\n\n" + "Mensaje: " + message, from_email = email, recipient_list = ['ventasvuica@gmail.com', 'paginawebvuica@gmail.com'])
         
         return HttpResponse("Gracias, le estaremos contestando pronto!") 
 
