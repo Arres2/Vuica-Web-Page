@@ -20,7 +20,8 @@ def index(request):
     else:
         return render(request, "index.html")
 
-    
+def google(request):
+	return render(request, "google13754e890efe3188.html")    
 
     
 
