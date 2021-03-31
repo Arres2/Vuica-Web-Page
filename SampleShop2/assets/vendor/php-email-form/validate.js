@@ -8,6 +8,15 @@ jQuery(document).ready(function($) {
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
+
+    f.children("#captchap").each(function(){
+
+      if(!grecaptcha.getResponse()){
+        ferror =true
+        $("#captchap").next('.validate').html(($("#captchap").attr('data-msg')) ).show('blind')
+      }
+    })
+
     f.children('input').each(function() { // run all inputs
      
       var i = $(this); // current input
