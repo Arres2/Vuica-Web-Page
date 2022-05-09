@@ -13,8 +13,9 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import json
 
-with open('/etc/config.json') as config_file:
-	config = json.load(config_file)
+# DESCOMENTA ESTO PARA VOLVER AL BUILD DE LINUX
+# with open('/etc/config.json') as config_file:
+# 	config = json.load(config_file)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
@@ -24,23 +25,23 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config['SECRET_KEY']
+SECRET_KEY = '@#1pbx(*5)4kwvo8x@%$&q7%vorl=sfe5%zr*%x=dx6vkr$p79'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['vuica.com.ve']
+# ALLOWED_HOSTS = ['vuica.com.ve']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '465'
-EMAIL_HOST_USER = config['EMAIL_USER']
-EMAIL_HOST_PASSWORD = config['EMAIL_PASS']
-EMAIL_USE_TLS = False
-EMAIL_USE_SSL = True
+# EMAIL_HOST_USER = config['EMAIL_USER']
+# EMAIL_HOST_PASSWORD = config['EMAIL_PASS']
+# EMAIL_USE_TLS = False
+# EMAIL_USE_SSL = True
 SESSION_COOKIE_SECURE = True
-
 
 
 # Application definition
@@ -146,9 +147,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets")
 ]
 STATICFILES_FINDERS = (
-'django.contrib.staticfiles.finders.FileSystemFinder',
-'django.contrib.staticfiles.finders.AppDirectoriesFinder')
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "products/products_assets/")
 MEDIA_URL = "/products_assets/"
-
