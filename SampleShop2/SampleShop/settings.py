@@ -28,10 +28,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@#1pbx(*5)4kwvo8x@%$&q7%vorl=sfe5%zr*%x=dx6vkr$p79'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['vuica.com.ve']
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ["https://vuica-web-site.herokuapp.com/", '127.0.0.1']
 
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

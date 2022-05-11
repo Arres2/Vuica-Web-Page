@@ -430,10 +430,12 @@ h6 {
 /* Place text in the middle of the image */
 .hero-text h1 {
   font-size: xx-large;
+  font-weight:bold;		
 }
 .hero-text h2 {
   font-size: medium;
   color: yellow;
+  font-weight: bold;
 }
 
 @media (max-width: 500px) {

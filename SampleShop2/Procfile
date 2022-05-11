@@ -1,0 +1,1 @@
+web: gunicorn Vuica-Web-Page.wsgi --log-file -
