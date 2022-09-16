@@ -1,7 +1,7 @@
 # Vuica-Web-Page
 Pagina web de VUICA
 
-<p>Created with django and bootstrap. Deployed initially on apache server now deployed on Heroku.</p>
+<p>Created with django and bootstrap. Deployed initially on apache server now deployed on Heroku (Db not attached).</p>
 
 
 
